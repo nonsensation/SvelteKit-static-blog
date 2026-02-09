@@ -4,6 +4,7 @@
 	import logo from '$lib/assets/logo.png';
 	import { browser } from '$app/environment';
 
+	import { resolve } from '$app/paths';
 	let { children } = $props();
 
 	// Theme state (true = dark, false = light)
@@ -96,10 +97,10 @@
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
 <header>
-	<a href="/">
+	<a href={resolve('/')}>
 		<span class="title">Nonsensation</span>
 	</a>
-	<a href="/">
+	<a href={resolve('/')}>
 		<img alt="logo" class="logo" src={logo} />
 	</a>
 

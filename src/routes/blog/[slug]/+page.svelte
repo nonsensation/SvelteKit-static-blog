@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
@@ -28,10 +29,10 @@
 
 	<div class="tagcloud">
 		<!-- {% for tagitem in tags %}
-                <a class="tag" href="/Tags#{{ tagitem | slugify }}">{{ tagitem }}</a>
+                <a class="tag" href="{resolve(`/Tags#{{ tagitem | slugify }}`)}">{{ tagitem }}</a>
             {% endfor %}
             {% for tagitem in cats %}
-                <a class="tag" href="/Categories#{{ tagitem | slugify }}">{{ tagitem }}</a>
+                <a class="tag" href="{resolve(`/Categories#{{ tagitem | slugify }}`)}">{{ tagitem }}</a>
             {% endfor %} -->
 	</div>
 </article>
